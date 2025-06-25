@@ -16,6 +16,33 @@
 
 ---
 
+## 🏗️ Kiến trúc phần mềm
+
+Ứng dụng tuân theo mô hình **Clean Architecture**, kết hợp với kiến trúc **MVVM (Model - View - ViewModel)** giúp code rõ ràng, dễ bảo trì và mở rộng.
+
+### 📁 Cấu trúc thư mục
+
+```plaintext
+presentation/
+│
+├── View (Fragment, Activity) #Giao diện
+├── ViewModel #Xử lý tương tác UI
+│
+domain/
+│
+├── model/ # Định nghĩa các entity
+├── repository/ (interface) #Interface kết nối với data layer
+├── use_case/ #xử lý logic chính
+│
+data/
+├── locale/ (Room DAO, Database)
+├── repository/ (implementation)
+
+📦 di/                   → Cấu hình Hilt DI
+📦 utils/                → Hằng số và hàm tiện ích
+📄 MyApplication.kt      → Application class
+
+```
 ## 🧰 Công nghệ sử dụng
 
 - 🏠 **Room** – Quản lý cơ sở dữ liệu cục bộ
@@ -24,31 +51,9 @@
 - 👓 **Jetpack ViewModel + LiveData** – Quản lý vòng đời và dữ liệu UI
 
 ---
+📌 Ghi chú
+Ứng dụng hoạt động hoàn toàn offline
 
-## 🏗️ Kiến trúc phần mềm
+Thiết kế tách biệt UI – Logic – Data
 
-Ứng dụng tuân theo mô hình **Clean Architecture**, kết hợp với kiến trúc **MVVM (Model - View - ViewModel)** giúp code rõ ràng, dễ bảo trì và mở rộng.
-
-### 📁 Cấu trúc thư mục
-
-<details>
-<summary><b>Hiển thị chi tiết</b></summary>
-
-```plaintext
-📦 presentation/
- ┣ 📂 views              → Giao diện: Fragment, Activity
- ┗ 📂 viewmodel          → ViewModel xử lý logic giao diện
-
-📦 domain/
- ┣ 📂 model              → Entity (MainUser, Product, Order,...)
- ┣ 📂 repository         → Interface giữa domain và data
- ┗ 📂 use_case           → Logic nghiệp vụ (đăng nhập, tạo hóa đơn,...)
-
-📦 data/
- ┣ 📂 locale             → Room DAO và Database
- ┗ 📂 repository         → Triển khai repository interface
-
-📦 di/                   → Cấu hình Hilt DI
-📦 utils/                → Hằng số và hàm tiện ích
-📄 MyApplication.kt      → Application class
-
+Sẵn sàng tích hợp API hoặc đồng bộ dữ liệu trong tương lai
