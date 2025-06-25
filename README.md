@@ -1,40 +1,38 @@
-# 📱 Ứng dụng bán hàng
+# 📱 Ứng dụng Bán Hàng – Android
 
-Ứng dụng bán hàng (Point-of-Sale) cho Android giúp quản lý người dùng, sản phẩm, đơn hàng và tạo hóa đơn nhanh chóng và dễ dàng.
+Ứng dụng bán hàng dành cho Android, hỗ trợ quản lý người dùng, sản phẩm, đơn hàng và tạo hóa đơn nhanh chóng, thân thiện với người dùng. Hoạt động hoàn toàn offline.
 
 ---
 
 ## 🚀 Tính năng chính
 
-- Đăng nhập và phân quyền (Admin / Cashier)
-- Quản lý người dùng: thêm, sửa, xóa
-- Quản lý danh mục, sản phẩm
-- Tạo đơn hàng và xem báo cáo doanh thu
-- Lưu trữ dữ liệu cục bộ bằng Room Database
-- Giao diện thân thiện, hiện đại, dễ sử dụng
+- ✅ Đăng nhập và phân quyền người dùng (Admin / Thu ngân)
+- ✅ Quản lý người dùng: thêm, sửa, xóa
+- ✅ Quản lý danh mục và sản phẩm
+- ✅ Tạo đơn hàng, lập hóa đơn
+- ✅ Xem báo cáo doanh thu
+- ✅ Lưu trữ dữ liệu cục bộ bằng Room
+- ✅ Giao diện hiện đại, dễ sử dụng
 
-##🧰 Công nghệ sử dụng
-🏠 Room – Quản lý dữ liệu cục bộ
+---
 
-💉 Hilt – Dependency Injection (DI)
+## 🧰 Công nghệ sử dụng
 
-🔁 Kotlin Coroutines – Xử lý bất đồng bộ
+- 🏠 **Room** – Quản lý cơ sở dữ liệu cục bộ
+- 💉 **Hilt** – Dependency Injection
+- 🔁 **Kotlin Coroutines** – Xử lý bất đồng bộ
+- 👓 **Jetpack ViewModel + LiveData** – Quản lý vòng đời và dữ liệu UI
 
-👓 Jetpack ViewModel + LiveData – Quản lý vòng đời & dữ liệu UI
-
-##📌 Ghi chú
-Ứng dụng hoạt động hoàn toàn offline, không cần kết nối mạng
-
-Thiết kế tách biệt rõ ràng giữa các tầng UI – Logic – Data
-
-Dễ dàng mở rộng và tích hợp API trong tương lai
+---
 
 ## 🏗️ Kiến trúc phần mềm
 
-Ứng dụng áp dụng mô hình **Clean Architecture** kết hợp với kiến trúc **MVVM (Model - View - ViewModel)**, giúp code dễ bảo trì, test và mở rộng.
+Ứng dụng tuân theo mô hình **Clean Architecture**, kết hợp với kiến trúc **MVVM (Model - View - ViewModel)** giúp code rõ ràng, dễ bảo trì và mở rộng.
+
+### 📁 Cấu trúc thư mục
 
 <details>
-<summary><b>📁 Cấu trúc thư mục</b></summary>
+<summary><b>Hiển thị chi tiết</b></summary>
 
 ```plaintext
 📦 presentation/
@@ -42,15 +40,15 @@ Dễ dàng mở rộng và tích hợp API trong tương lai
  ┗ 📂 viewmodel          → ViewModel xử lý logic giao diện
 
 📦 domain/
- ┣ 📂 model              → Định nghĩa các entity (MainUser, Product, Order,...)
- ┣ 📂 repository         → Interface kết nối giữa tầng domain và data
- ┗ 📂 use_case           → Xử lý logic nghiệp vụ (đăng nhập, lưu dữ liệu,...)
+ ┣ 📂 model              → Entity (MainUser, Product, Order,...)
+ ┣ 📂 repository         → Interface giữa domain và data
+ ┗ 📂 use_case           → Logic nghiệp vụ (đăng nhập, tạo hóa đơn,...)
 
 📦 data/
- ┣ 📂 locale             → Room DAO, Database (dữ liệu cục bộ)
- ┗ 📂 repository         → Triển khai các interface từ domain
+ ┣ 📂 locale             → Room DAO và Database
+ ┗ 📂 repository         → Triển khai repository interface
 
-📦 di/                   → Cấu hình Dependency Injection (Hilt)
-📦 utils/                → Các hằng số, hàm tiện ích dùng chung
-📄 MyApplication.kt      → Lớp khởi tạo ứng dụng (Application class)
+📦 di/                   → Cấu hình Hilt DI
+📦 utils/                → Hằng số và hàm tiện ích
+📄 MyApplication.kt      → Application class
 
