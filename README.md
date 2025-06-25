@@ -51,7 +51,7 @@ data/
 - 👓 **Jetpack ViewModel + LiveData** – Quản lý vòng đời và dữ liệu UI
 
 ---
-📌 Ghi chú
+## 📌 Ghi chú
 Ứng dụng hoạt động hoàn toàn offline
 
 Thiết kế tách biệt UI – Logic – Data
