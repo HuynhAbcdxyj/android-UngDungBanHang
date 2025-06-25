@@ -13,7 +13,7 @@
 - Lưu trữ dữ liệu cục bộ bằng Room Database
 - Giao diện thân thiện, hiện đại, dễ sử dụng
 
-🧰 Công nghệ sử dụng
+##🧰 Công nghệ sử dụng
 🏠 Room – Quản lý dữ liệu cục bộ
 
 💉 Hilt – Dependency Injection (DI)
@@ -22,7 +22,7 @@
 
 👓 Jetpack ViewModel + LiveData – Quản lý vòng đời & dữ liệu UI
 
-📌 Ghi chú
+##📌 Ghi chú
 Ứng dụng hoạt động hoàn toàn offline, không cần kết nối mạng
 
 Thiết kế tách biệt rõ ràng giữa các tầng UI – Logic – Data
