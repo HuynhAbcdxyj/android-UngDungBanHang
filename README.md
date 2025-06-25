@@ -13,7 +13,21 @@
 - Lưu trữ dữ liệu cục bộ bằng Room Database
 - Giao diện thân thiện, hiện đại, dễ sử dụng
 
----
+🧰 Công nghệ sử dụng
+🏠 Room – Quản lý dữ liệu cục bộ
+
+💉 Hilt – Dependency Injection (DI)
+
+🔁 Kotlin Coroutines – Xử lý bất đồng bộ
+
+👓 Jetpack ViewModel + LiveData – Quản lý vòng đời & dữ liệu UI
+
+📌 Ghi chú
+Ứng dụng hoạt động hoàn toàn offline, không cần kết nối mạng
+
+Thiết kế tách biệt rõ ràng giữa các tầng UI – Logic – Data
+
+Dễ dàng mở rộng và tích hợp API trong tương lai
 
 ## 🏗️ Kiến trúc phần mềm
 
@@ -39,22 +53,4 @@
 📦 di/                   → Cấu hình Dependency Injection (Hilt)
 📦 utils/                → Các hằng số, hàm tiện ích dùng chung
 📄 MyApplication.kt      → Lớp khởi tạo ứng dụng (Application class)
-</details>
 
-🧰 Công nghệ sử dụng
-🏠 Room – Quản lý dữ liệu cục bộ
-
-💉 Hilt – Dependency Injection (DI)
-
-🔁 Kotlin Coroutines – Xử lý bất đồng bộ
-
-👓 Jetpack ViewModel + LiveData – Quản lý vòng đời & dữ liệu UI
-
-🎨 Material Design Components – Giao diện chuẩn Google
-
-📌 Ghi chú
-Ứng dụng hoạt động hoàn toàn offline, không cần kết nối mạng
-
-Thiết kế tách biệt rõ ràng giữa các tầng UI – Logic – Data
-
-Dễ dàng mở rộng và tích hợp API trong tương lai
