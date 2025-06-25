@@ -1,6 +1,6 @@
-# 📱 POS Terminal App
+# 📱 Ứng dụng bán hàng
 
-Ứng dụng bán hàng (Point-of-Sale) cho Android giúp quản lý người dùng, sản phẩm, đơn hàng và tạo hóa đơn dễ dàng.
+Ứng dụng bán hàng cho Android giúp quản lý người dùng, sản phẩm, đơn hàng và tạo hóa đơn dễ dàng.
 
 ## 🚀 Tính năng chính
 
