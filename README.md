@@ -12,6 +12,7 @@
 - Giao diện hiện đại, dễ sử dụng
 
 ## 🏗️ Kiến trúc phần mềm
+<details> <summary><b>
 Ứng dụng được phát triển theo mô hình **Clean Architecture** kết hợp **MVVM (Model - View - ViewModel)**, giúp dễ bảo trì, kiểm thử và mở rộng.
 presentation/
 │
@@ -27,7 +28,7 @@ domain/
 data/
 ├── locale/ (Room DAO, Database)
 ├── repository/ (implementation)
-
+</b></summary>
 📦 di/ → Dependency Injection (Hilt)
 📦 utils/ → Hằng số, tiện ích dùng chung
 📄 MyApplication.kt → Lớp khởi tạo ứng dụng
