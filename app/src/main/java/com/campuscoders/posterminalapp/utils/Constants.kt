@@ -25,12 +25,12 @@ object Constants {
     // Default Customer
     const val CUSTOMER_VKN_TCKN = "51828901547"
     const val CUSTOMER_COMPANY_NAME = ""
-    const val CUSTOMER_FIRST_NAME = "Nihai"
-    const val CUSTOMER_LAST_NAME = "Tüketici"
+    const val CUSTOMER_FIRST_NAME = "Trần"
+    const val CUSTOMER_LAST_NAME = "Huỳnh"
     const val CUSTOMER_PHONE_NUMBER = ""
     const val CUSTOMER_EMAIL = "customer@gmail.com"
-    const val CUSTOMER_PROVINCE = "İstanbul"
-    const val CUSTOMER_DISTRICT = "Zeytinburnu"
+    const val CUSTOMER_PROVINCE = "Ha Noi"
+    const val CUSTOMER_DISTRICT = "Cau Giay"
     const val CUSTOMER_TAX_OFFICE = ""
     const val CUSTOMER_ADDRESS = ""
 
@@ -49,11 +49,11 @@ object Constants {
     const val PROGRESS_BAR_DURATION = 1000
 
     // Dialogs
-    const val INFORMATIONS_VERIFYING = "Bilgileriniz Doğrulanıyor"
-    const val PIN_VERIFYING = "PIN Doğrulanıyor"
-    const val LOADING_MALI_ID = "Mali ID Alınıyor"
-    const val QUERY_SALE = "Satış Sorgulanıyor"
-    const val QUERY_DOCUMENT = "Belge Sorgulanıyor"
-    const val SHOPPING_CART = "Ürünler Yükleniyor"
-    const val EMPTY_LIST = "Sepet Boşaltılıyor"
+    const val INFORMATIONS_VERIFYING = "Thông tin của bạn được xác nhận"
+    const val PIN_VERIFYING = "PIN xác nhận"
+    const val LOADING_MALI_ID = "Id mali đang được lấy"
+    const val QUERY_SALE = "Bán hàng được đặt câu hỏi"
+    const val QUERY_DOCUMENT = "Tài liệu được đặt câu hỏi"
+    const val SHOPPING_CART = "Sản phẩm đang tải"
+    const val EMPTY_LIST = "Giỏ được làm trống"
 }

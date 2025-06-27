@@ -81,7 +81,7 @@ class CategoriesFragment : Fragment() {
 
         val saleActivity = (activity as SaleActivity)
         saleActivity.setEnabledShoppingCartIcon(true)
-        saleActivity.changeSaleActivityTopBarTitle("Kategoriler")
+        saleActivity.changeSaleActivityTopBarTitle("Thể loại")
 
         categoriesAdapter.setOnItemClickListener {
             val bundle = Bundle()

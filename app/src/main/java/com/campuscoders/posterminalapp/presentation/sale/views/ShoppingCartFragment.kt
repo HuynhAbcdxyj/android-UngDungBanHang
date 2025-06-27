@@ -48,8 +48,8 @@ class ShoppingCartFragment : Fragment() {
                 baseViewModel.updateShoppingCartList(shoppingCartItem.productId)
                 shoppingCartAdapter.notifyChanges()
 
-                Snackbar.make(binding.root, "${shoppingCartItem.productName} ürünü silindi.", Snackbar.LENGTH_LONG)
-                    .setAction("Geri al") {
+                Snackbar.make(binding.root, "${shoppingCartItem.productName} Sản phẩm đã bị xóa.", Snackbar.LENGTH_LONG)
+                    .setAction("Lấy nó trở lại") {
                         baseViewModel.replaceOldVersion(oldShoppingCartList?: mutableListOf())
                     }
                     .show()
@@ -73,13 +73,13 @@ class ShoppingCartFragment : Fragment() {
 
         saleActivity = (activity as SaleActivity)
         saleActivity.setEnabledShoppingCartIcon(false)
-        saleActivity.changeSaleActivityTopBarTitle("Sepet")
+        saleActivity.changeSaleActivityTopBarTitle("Giỏ hàng")
 
         shoppingCartAdapter.setOnRemoveClickListener {productName, productId ->
             val oldShoppingCartList = baseViewModel.statusShoppingCartList.value
             baseViewModel.updateShoppingCartList(productId)
-            Snackbar.make(binding.root, "$productName ürünü silindi.", Snackbar.LENGTH_LONG)
-                .setAction("Geri al") {
+            Snackbar.make(binding.root, "$productName Sản phẩm đã bị xóa.", Snackbar.LENGTH_LONG)
+                .setAction("Lấy nó trở lại") {
                     baseViewModel.replaceOldVersion(oldShoppingCartList?: mutableListOf())
                 }
                 .show()
@@ -147,12 +147,12 @@ class ShoppingCartFragment : Fragment() {
         alertDialogBuilder.setTitle(requireActivity().getString(R.string.dialog_empty))
         alertDialogBuilder.setMessage(requireActivity().getString(R.string.dialog_content_empty))
 
-        alertDialogBuilder.setPositiveButton("Evet") { _, _ ->
+        alertDialogBuilder.setPositiveButton("Có") { _, _ ->
             baseViewModel.resetShoppingCartList()
             requireActivity().showProgressDialog(Constants.EMPTY_LIST)
             moveToBackCategoriesFragment()
         }
-        alertDialogBuilder.setNegativeButton("Hayır") { _, _ -> }
+        alertDialogBuilder.setNegativeButton("Không") { _, _ -> }
 
         val alertDialog = alertDialogBuilder.create()
         alertDialog.show()

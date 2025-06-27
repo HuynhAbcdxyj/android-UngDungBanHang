@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                 permissionsToRequest.add(readPermission)
             }
 
-            // İzinleri talep et
+            // Yêu cầu quyền
             if (permissionsToRequest.isNotEmpty()) {
                 val permissionArray = permissionsToRequest.toTypedArray()
                 requestPermissions(permissionArray, 1)

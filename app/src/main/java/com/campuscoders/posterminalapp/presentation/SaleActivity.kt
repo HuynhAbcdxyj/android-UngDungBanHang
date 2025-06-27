@@ -44,7 +44,7 @@ class SaleActivity : AppCompatActivity() {
 
                 showProgressDialog(Constants.SHOPPING_CART)
             } else {
-                Toast.makeText(this, "Sepet boş, ürün ekleyiniz.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Giỏ trống, thêm sản phẩm.", Toast.LENGTH_SHORT).show()
             }
         }
 

@@ -82,7 +82,7 @@ class ProductsFragment: Fragment() {
         val args = arguments
         args?.let {
             val categoryId = it.getString("category_id")
-            val topBarTitle = "Kategoriler/${changeTopBarTitle(categoryId.toString())}"
+            val topBarTitle = "Thể loại/${changeTopBarTitle(categoryId.toString())}"
             saleActivity?.changeSaleActivityTopBarTitle(topBarTitle)
             baseViewModel.getProductsByCategoryId(categoryId!!)
         }
@@ -120,18 +120,18 @@ class ProductsFragment: Fragment() {
 
     private fun changeTopBarTitle(categoryId: String): String {
         return when(categoryId) {
-            "1" -> "Yiyecek"
-            "2" -> "İçecek"
-            "3" -> "Meyve"
-            "4" -> "Kişisel Bakım"
-            "5" -> "Dondurma"
-            "6" -> "Bebek"
-            "7" -> "Fırın"
-            "8" -> "Sebze"
-            "9" -> "Atıştırmalık"
-            "10" -> "İlaç"
-            "11" -> "Ev Eşya"
-            else -> "null"
+            "1" -> "Đồ ăn"
+            "2" -> "Đồ uống"
+            "3" -> "Trái cây"
+            "4" -> "Chăm sóc cá nhân"
+            "5" -> "Kem"
+            "6" -> "Đồ trẻ nhỏ"
+            "7" -> "Hàng bánh"
+            "8" -> "Rau củ"
+            "9" -> "Đồ ăn vặt"
+            "10" -> "Thuốc"
+            "11" -> "Hàng gia dụng"
+            else -> "rỗng"
         }
     }
 
