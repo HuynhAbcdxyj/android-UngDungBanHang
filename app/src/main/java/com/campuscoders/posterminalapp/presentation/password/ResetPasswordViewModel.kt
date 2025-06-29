@@ -21,7 +21,51 @@ class ResetPasswordViewModel @Inject constructor(
 ) : ViewModel(){
 
     private var _statusIsUpdated = MutableLiveData<Resource<Boolean>>()
-    val statusIsUpdated: LiveData<Resource<sẻ
+    val statusIsUpdated: LiveData<Resource<Boolean>>
+        get() = _statusIsUpdated
+
+    private var _timer = MutableLiveData<String>()
+    val timer: LiveData<String>
+        get() = _timer
+
+    private var _onFinish = MutableLiveData<Boolean>()
+    val onFinish: LiveData<Boolean>
+        get() = _onFinish
+
+    init {
+        startTimer()
+    }
+
+    fun startTimer() {
+        _onFinish.value = false
+        var timerMinute = Constants.MINUTE
+        var timerSecond = 0
+
+        viewModelScope.launch {
+            var control = true
+            while (control) {
+                delay(1000)
+                if (timerSecond == 0) {
+                    timerMinute--
+                    timerSecond = 59
+                } else timerSecond--
+
+                val formattedMinute = if (timerMinute < 10) "0$timerMinute" else "$timerMinute"
+                val formattedSecond = if (timerSecond < 10) "0$timerSecond" else "$timerSecond"
+                _timer.value = "$formattedMinute:$formattedSecond"
+
+                if (timerMinute == 0 && timerSecond == 0) {
+                    control = false
+                    _onFinish.value = true
+                }
+            }
+        }
+    }
+
+    fun updateMainUserPassword(newPassword: String) {
+        _statusIsUpdated.value = Resource.Loading(null)
+        viewModelScope.launch {
+            // VKN_TCKN -> Mã số thuế sẽ bị xóa khỏi quyền ưu tiên chia sẻ
             val responseFromMainUserPasswordUseCase = updateMainUserPasswordUseCase.executeUpdateMainUserPassword(VKN_TCKN,newPassword)
             when(responseFromMainUserPasswordUseCase) {
                 is Resource.Success -> {
