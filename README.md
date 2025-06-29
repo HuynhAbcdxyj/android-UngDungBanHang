@@ -9,7 +9,7 @@
 - ✅ Đăng nhập và phân quyền người dùng (Admin / Thu ngân)
 - ✅ Quản lý người dùng: thêm, sửa, xóa
 - ✅ Quản lý danh mục và sản phẩm
-- ✅ Tạo đơn hàng, lập hóa đơn
+- ✅ Quét mã vạch trên mỗi sản phẩm để tạo đơn hàng
 - ✅ Xem báo cáo doanh thu
 - ✅ Lưu trữ dữ liệu cục bộ bằng Room
 - ✅ Giao diện hiện đại, dễ sử dụng
