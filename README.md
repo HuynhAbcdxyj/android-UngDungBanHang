@@ -15,13 +15,6 @@
 - ✅ Giao diện hiện đại, dễ sử dụng
 
 ---
-## 📸 Screenshots
-![image](https://github.com/user-attachments/assets/93172a94-f5f6-4e96-b2de-8cc57c83ce3e) ![image](https://github.com/user-attachments/assets/fb8ffd19-e69c-4293-b42e-257b3f521471)
-![image](https://github.com/user-attachments/assets/5680e65a-8d35-4afd-8ceb-41bd200a10ed) ![image](https://github.com/user-attachments/assets/dcda71c8-b7fc-457b-9ffe-7030f1c27892)
-
-
-
-
 ## 🏗️ Kiến trúc phần mềm
 
 Ứng dụng tuân theo mô hình **Clean Architecture**, kết hợp với kiến trúc **MVVM (Model - View - ViewModel)** giúp code rõ ràng, dễ bảo trì và mở rộng.
